@@ -1,0 +1,20 @@
+<div class="product-container">
+  <div class="section-top">
+    <img [src]="image" alt="product-image" class="product-image" />
+    <div class="title-price">
+      <span class="title">{{ title }}</span>
+      <span>${{ price }}</span>
+    </div>
+  </div>
+  <div class="section-bottom">
+    <p class="product-description">{{ description }}</p>
+    <div *ngIf="isAddedToCart; else addToCart" class="added-to-cart product-action">
+      Added to Cart
+    </div>
+    <ng-template #addToCart>
+      <button appEsActionButton class="product-action" (click)="addProductToCart()">
+        Add to Cart
+      </button>
+    </ng-template>
+  </div>
+</div>

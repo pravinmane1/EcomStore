@@ -1,0 +1,24 @@
+<div class="navigation-container">
+  <div>
+    <span class="store-title" (click)="onHomeClick()">EcomStore</span>
+  </div>
+  <div>
+    <span
+      class="nav-item nav-home"
+      (click)="onHomeClick()"
+      [routerLink]="['./']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLinkActive]="'nav-item-selected'"
+      >Home</span
+    >
+  </div>
+  <div>
+    <span
+      class="nav-item"
+      (click)="onCartClick()"
+      [routerLink]="'/cart'"
+      [routerLinkActive]="'nav-item-selected'"
+      >Cart</span
+    >
+  </div>
+</div>

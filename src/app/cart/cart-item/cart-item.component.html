@@ -1,0 +1,21 @@
+<div class="cart-item-container">
+  <div class="section-top">
+    <img [src]="image" alt="product-image" class="product-image" />
+    <div class="title-price">
+      <span class="title">{{ title }}</span>
+      <span>${{ price }}</span>
+    </div>
+  </div>
+  <div class="section-bottom">
+    <button appEsActionButton="negative" (click)="onRemove()">Remove</button>
+    <div class="quantity-section">
+      <div>
+        <img src="assets/minus.svg" alt="minus" class="quantity-icon" (click)="onQuantityDecrement()"/>
+      </div>
+      <div class="quantity-num">{{ quantity }}</div>
+      <div>
+        <img src="assets/plus.svg" alt="plus" class="quantity-icon"(click)="onQuantityIncrement()" />
+      </div>
+    </div>
+  </div>
+</div>

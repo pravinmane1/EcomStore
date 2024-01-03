@@ -1,0 +1,21 @@
+<div
+  class="product-list"
+  infinite-scroll
+  (scrolled)="onScrollDown()"
+  [infiniteScrollDistance]="1"
+  [infiniteScrollThrottle]="300"
+>
+  <ng-container *ngFor="let product of products">
+    <app-es-product
+      [image]="product.image"
+      [title]="product.title"
+      [price]="product.price"
+      [description]="product.description"
+      [isAddedToCart]="isAddedToCart(product.id)"
+      (addToCart)="onAddToCart(product)"
+    ></app-es-product>
+  </ng-container>
+</div>
+<app-es-loader
+  [ngStyle]="{ visibility: isFetchingProducts ? 'visible' : 'hidden' }"
+></app-es-loader>

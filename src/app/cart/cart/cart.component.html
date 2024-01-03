@@ -1,0 +1,25 @@
+<div class="cart-container">
+  <div class="cart-item-list" *ngIf="!isCartEmpty()">
+    <ng-container *ngFor="let cartItem of cartItems">
+      <app-es-cart-item
+        [image]="cartItem.image"
+        [title]="cartItem.title"
+        [price]="cartItem.price"
+        [quantity]="cartItem.quantity"
+        (quantityIncrement)="onQuantityIncrement(cartItem)"
+        (quantityDecrement)="onQuantityDecrement(cartItem)"
+        (removeItem)="onRemoveItem(cartItem.id)"
+      ></app-es-cart-item>
+    </ng-container>
+  </div>
+  <div *ngIf="isCartEmpty(); else cartValue" class="no-items">
+    No Items in Cart...
+  </div>
+  <ng-template #cartValue>
+    <div class="cart-value">
+      <div class="cart-value-text">Total Cart Value : </div>
+      <div class="cart-value-text">${{ totalCartValue | number : "1.2-2" }}</div>
+      <button appEsActionButton class="checkout">Checkout</button>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,17 @@
+.app-container {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.app-navigation {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+}
+
+.app-content {
+  padding: 50px 30px 0px;
+  flex-grow: 1;
+  background-color: #eff1f4;
+}

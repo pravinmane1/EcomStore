@@ -1,0 +1,30 @@
+.navigation-container {
+  padding: 5px;
+  background-color: #2874f0;
+  color: white;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.store-title {
+  padding: 5px;
+  font-size: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.nav-item {
+  font-size: 20px;
+  padding: 5px 20px;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav-item-selected{
+  color: orange;
+}
+
+.nav-home{
+  margin-left: 50px;
+}
