@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && echo 'pravinmane.com' > ./build/CNAME",
+    "build": "ng build && echo 'pravinmane.com' > ./dist/ecom-store/CNAME",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "ng deploy --base-href=./ --no-silent"
