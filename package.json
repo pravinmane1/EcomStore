@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build  && cp CNAME ./dist/ecom-store",
+    "ngbuild":"ng build",
+    "copycname":"cp CNAME ./dist/ecom-store",
+    "build": "npm run ngbuild && npm run copycname",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "ng deploy --base-href=./ --no-silent"
