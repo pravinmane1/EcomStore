@@ -4,12 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "ngbuild":"ng build",
-    "copycname":"cp CNAME ./dist/ecom-store",
-    "build": "npm run ngbuild && npm run copycname",
+    "build":"ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --base-href=./ --no-silent"
+    "deploy": "ng deploy --cname=pravinmane.com --no-silent"
   },
   "private": true,
   "dependencies": {
